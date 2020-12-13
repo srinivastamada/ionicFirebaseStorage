@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      Photo Upload
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,9 +9,18 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
+      <ion-title size="large">Photo Upload</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Firebase Image Upload</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <app-photo-upload></app-photo-upload>
+      <app-photos-list></app-photos-list>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
