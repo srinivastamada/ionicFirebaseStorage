@@ -1,3 +1,4 @@
+import { FirebaseAuthService } from './../services/firebase-auth.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,6 +8,10 @@ import { Component } from '@angular/core';
 })
 export class Tab1Page {
 
-  constructor() {}
+  constructor(private firebaseAuthService: FirebaseAuthService) {}
+
+  logoutAction(){
+   this.firebaseAuthService.logout();
+  }
 
 }
