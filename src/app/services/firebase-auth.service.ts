@@ -12,9 +12,9 @@ export class FirebaseAuthService {
   constructor(private angularFireAuth: AngularFireAuth, public router: Router) {}
 
   firebaseSocialLogin(provider) {
-    this.angularFireAuth.signInWithPopup(provider).then((user: any) => {
-      console.log(user);
-      localStorage.setItem('user', JSON.stringify(user));
+    this.angularFireAuth.signInWithPopup(provider).then((res: any) => {
+      console.log(res);
+      localStorage.setItem('user', JSON.stringify(res.user));
       this.router.navigate(['']);
     });
   }
