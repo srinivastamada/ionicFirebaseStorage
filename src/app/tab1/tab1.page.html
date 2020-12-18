@@ -3,6 +3,7 @@
     <ion-title>
       Photo Upload
     </ion-title>
+    <ion-button color="primary " slot="end" (click)="logoutAction()" >Log out</ion-button>
   </ion-toolbar>
 </ion-header>
 
@@ -17,12 +18,8 @@
     <ion-card-header>
       <ion-card-title>Welcome to {{userProfileData?.displayName}}</ion-card-title>
     </ion-card-header>
-  
     <ion-card-content>
       <app-photo-upload></app-photo-upload>
-      <app-photos-list></app-photos-list>
-
-      <ion-button color="primary"  (click)="logoutAction()">Log out</ion-button>
     </ion-card-content>
   </ion-card>
 </ion-content>
