@@ -11,7 +11,9 @@ export class PhotoUploadComponent implements OnInit {
   imageUploads = [];
   constructor(private firebaseUploadService: FirebaseUploadService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    
+  }
 
   // Upload image action
   uploadPhoto(event) {
@@ -29,4 +31,6 @@ export class PhotoUploadComponent implements OnInit {
       }
     );
   }
+
+ 
 }
