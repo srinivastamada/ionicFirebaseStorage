@@ -3,6 +3,8 @@
     <div>
       <div><b>⛰ Upload photo</b></div><br/>
       <input type="file" (change)="uploadPhoto($event)" accept=".png,.jpg" multiple="true" />
+      
+      <div *ngIf="errorMessage" class="error">{{errorMessage}}</div>
     </div>
   </form>
 </div>

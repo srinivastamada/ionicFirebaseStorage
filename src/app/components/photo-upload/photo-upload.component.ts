@@ -8,6 +8,7 @@ import { FirebaseUploadService } from './../../services/firebase-upload.service'
 })
 export class PhotoUploadComponent implements OnInit {
   barStatus = false;
+  errorMessage = '';
   imageUploads = [];
   constructor(private firebaseUploadService: FirebaseUploadService) {}
 
@@ -24,9 +25,10 @@ export class PhotoUploadComponent implements OnInit {
           console.log(res);
           this.imageUploads.unshift(res);
           this.barStatus = false;
-        }
+        } 
       },
       (error: any) => {
+        this.errorMessage = 'File size exceeded. Maximum file size 1 MB'
         this.barStatus = false;
       }
     );
